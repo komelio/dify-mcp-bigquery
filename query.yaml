@@ -1,0 +1,42 @@
+identity:
+  author: LG CNS
+  name: query
+  label:
+    en_US: BigQuery SQL Query
+    ko_KR: BigQuery SQL 쿼리
+description:
+  human:
+    en_US: Execute BigQuery SQL queries through MCP
+    ko_KR: MCP를 통한 BigQuery SQL 쿼리 실행
+  llm: Run a read-only BigQuery SQL query through MCP integration
+parameters:
+  - name: sql
+    type: string
+    required: true
+    label:
+      en_US: SQL Query
+      ko_KR: SQL 쿼리
+    human_description:
+      en_US: SQL query to execute
+      ko_KR: 실행할 SQL 쿼리
+    llm_description: SQL query to execute on BigQuery
+    form: form
+  - name: maximumBytesBilled
+    type: string
+    required: false
+    label:
+      en_US: Maximum Bytes Billed
+      ko_KR: 최대 청구 바이트
+    human_description:
+      en_US: Maximum bytes billed (default: 1GB)
+      ko_KR: 최대 청구 바이트 (기본값: 1GB)
+    llm_description: Maximum bytes billed (default: 1GB)
+    form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+extra:
+  python:
+    source: query.py

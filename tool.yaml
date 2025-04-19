@@ -1,0 +1,37 @@
+identity:
+  author: LG CNS
+  name: mcp_bigquery
+  label:
+    en_US: MCP BigQuery
+    ko_KR: MCP BigQuery
+  description:
+    en_US: Execute BigQuery SQL queries through MCP
+    ko_KR: MCP를 통한 BigQuery SQL 쿼리 실행
+  icon: icon.svg
+  tags:
+    - utilities
+credentials_for_provider:
+  mcp_api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: MCP API Key
+      ko_KR: MCP API 키
+    placeholder:
+      en_US: Please input your MCP API key
+      ko_KR: MCP API 키를 입력하세요
+  mcp_api_url:
+    type: string
+    required: true
+    label:
+      en_US: MCP API URL
+      ko_KR: MCP API URL
+    placeholder:
+      en_US: https://your-mcp-api-endpoint
+      ko_KR: https://your-mcp-api-endpoint
+    default: "https://your-mcp-api-endpoint"
+tools:
+  - query.yaml
+extra:
+  python:
+    source: tool.py

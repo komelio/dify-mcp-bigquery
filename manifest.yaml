@@ -1,0 +1,34 @@
+version: 0.0.1
+type: "plugin"
+author: "LG CNS"
+name: "mcp-bigquery"
+label:
+  en_US: "MCP BigQuery"
+  ko_KR: "MCP BigQuery"
+description:
+  en_US: "MCP BigQuery Integration for Dify"
+  ko_KR: "MCP를 통한 BigQuery SQL 쿼리 실행"
+created_at: "2025-04-20T01:58:00.000000000Z"
+icon: "icon.svg"
+resource:
+  memory: 1048576
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - "tool.yaml"
+meta:
+  version: 0.0.1
+  arch:
+    - "amd64"
+    - "arm64"
+  runner:
+    language: "python"
+    version: "3.12"
+    entrypoint: "main"
