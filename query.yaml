@@ -28,9 +28,9 @@ parameters:
       en_US: Maximum Bytes Billed
       ko_KR: 최대 청구 바이트
     human_description:
-      en_US: Maximum bytes billed (default: 1GB)
+      en_US: Maximum bytes billed (default 1GB)
       ko_KR: 최대 청구 바이트 (기본값: 1GB)
-    llm_description: Maximum bytes billed (default: 1GB)
+    llm_description: Maximum bytes billed (default 1GB)
     form: form
 output_schema:
   type: object
